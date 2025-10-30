@@ -13,7 +13,8 @@ class ConnectionManager {
 	private var keepaliveTimer: DispatchSourceTimer?
 	private let fileDownloadRequestMapLock = ReadWriteLock()
 	private var fileDownloadRequestMap: [Int16: FileDownloadRequest] = [:]
-	
+    private let pingberryService = PingBerryService()
+    
 	/// Gets an array of connections in a thread-safe manner
 	var connections: [ClientConnection]? {
 		guard let dataProxy = dataProxy else { return nil }
@@ -251,8 +252,28 @@ class ConnectionManager {
 	 */
 	public func sendPushNotification(messages: [MessageInfo], modifiers: [ModifierInfo]) {
 		//Make sure we have content to send
-		guard !messages.isEmpty || !modifiers.isEmpty else { return }
-		
+        guard !messages.isEmpty || !modifiers.isEmpty else { return }
+
+        if (PreferencesManager.shared.pingberryEnabled) {
+            // Send notification only if all clients offline.
+            // TODO make configurable in preferences.
+            if (dataProxy?.connections.count == 0) {
+                pingberryService.sendNotification(
+                    pingberryEmail: PreferencesManager.shared.pingberryEmail,
+                    messages: messages
+                ) { result in
+                    switch result {
+                    case .success(let value):
+                        print("[PingBerry Service] Successfully sent notification: \(value)")
+                    case .failure(let error):
+                        print("[PingBerry Service] Error sending notification: \(error.localizedDescription)")
+                    }
+                }
+            } else {
+                print("[PingBerry Service] Not sending message since a client is connected")
+            }
+        }
+
 		//Make sure we have an active data proxy
 		guard let dataProxy = dataProxy, dataProxy.supportsPushNotifications else { return }
 		
@@ -1598,7 +1619,7 @@ extension ConnectionManager: DataProxyDelegate {
 		crumb.data = [
 			"Client ID": client.id
 		]
-		SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
 		
 		//Send an update
 		NotificationNames.postUpdateConnectionCount(totalCount)
@@ -1647,7 +1668,7 @@ extension ConnectionManager: DataProxyDelegate {
 		crumb.data = [
 			"Client ID": client.id
 		]
-		SentrySDK.addBreadcrumb(crumb: crumb)
+        SentrySDK.addBreadcrumb(crumb)
 		
 		//Send an update
 		NotificationNames.postUpdateConnectionCount(totalCount)
@@ -1688,7 +1709,7 @@ extension ConnectionManager: DataProxyDelegate {
 				"Message type": messageTypeRaw,
 				"Message length": messageLength
 			]
-			SentrySDK.addBreadcrumb(crumb: crumb)
+            SentrySDK.addBreadcrumb(crumb)
 		}
 		
 		//Process the message

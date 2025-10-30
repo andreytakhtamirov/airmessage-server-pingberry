@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23727"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -355,7 +355,7 @@
                             <visualEffectView blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="VOw-pD-d3q">
                                 <rect key="frame" x="0.0" y="0.0" width="630" height="142"/>
                             </visualEffectView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ct5-5b-MS8">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ct5-5b-MS8">
                                 <rect key="frame" x="18" y="96" width="308" height="26"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to AirMessage Server!" id="9fs-P2-oJc">
                                     <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -366,7 +366,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.intro.title"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-HO-5MA">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-HO-5MA">
                                 <rect key="frame" x="18" y="56" width="594" height="32"/>
                                 <textFieldCell key="cell" id="PEh-88-jev">
                                     <font key="font" metaFont="system"/>
@@ -439,7 +439,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="300" height="171"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OdL-ey-KB2">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OdL-ey-KB2">
                                 <rect key="frame" x="18" y="135" width="66" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Password:" id="74T-oH-DMf">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -450,7 +450,7 @@ DQ
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="label.password"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <secureTextField verticalHuggingPriority="750" contentType="password" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-bK-Xp5" userLabel="Password Field">
+                            <secureTextField focusRingType="none" verticalHuggingPriority="750" contentType="password" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-bK-Xp5" userLabel="Password Field">
                                 <rect key="frame" x="20" y="106" width="260" height="21"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" echosBullets="NO" id="mgy-op-aOs">
                                     <font key="font" metaFont="system"/>
@@ -458,7 +458,7 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </secureTextFieldCell>
                             </secureTextField>
-                            <textField hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uf5-Xa-mea" userLabel="Plaintext Field">
+                            <textField hidden="YES" focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uf5-Xa-mea" userLabel="Plaintext Field">
                                 <rect key="frame" x="20" y="106" width="260" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="aHF-DV-xJ5">
                                     <font key="font" metaFont="system"/>
@@ -469,7 +469,7 @@ DQ
                                     </allowedInputSourceLocales>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-F3-OBc">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-F3-OBc">
                                 <rect key="frame" x="18" y="84" width="105" height="14"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Password strength:" id="Rwd-xa-lWb">
                                     <font key="font" metaFont="smallSystem"/>
@@ -492,9 +492,6 @@ DQ
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hDo-y4-bKW">
                                 <rect key="frame" x="193" y="13" width="94" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="vcl-En-gux"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xu7-77-KBd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -502,6 +499,9 @@ DQ
 DQ
 </string>
                                 </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="vcl-En-gux"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="action.ok"/>
                                 </userDefinedRuntimeAttributes>
@@ -511,9 +511,6 @@ DQ
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bji-OY-umh">
                                 <rect key="frame" x="101" y="13" width="94" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="3qT-I5-opO"/>
-                                </constraints>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HDc-b8-hR3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -521,6 +518,9 @@ DQ
 Gw
 </string>
                                 </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3qT-I5-opO"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="action.cancel"/>
                                 </userDefinedRuntimeAttributes>
@@ -591,7 +591,7 @@ Gw
                                 <rect key="frame" x="229" y="261" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-H5-Dj1">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-H5-Dj1">
                                 <rect key="frame" x="45" y="237" width="400" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Checking your connection…" id="Opk-1u-xCG">
@@ -649,16 +649,16 @@ Gw
             <objects>
                 <viewController id="TFo-6b-9Gw" customClass="PreferencesViewController" customModule="AirMessage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-76-wwb">
-                        <rect key="frame" x="0.0" y="0.0" width="540" height="376"/>
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="490"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6w-Jg-Lwu">
-                                <rect key="frame" x="20" y="20" width="500" height="336"/>
+                                <rect key="frame" x="20" y="20" width="500" height="450"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BoU-vA-LNw">
-                                        <rect key="frame" x="8" y="301" width="158" height="35"/>
+                                        <rect key="frame" x="8" y="405" width="158" height="45"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfS-Ya-yHK">
-                                                <rect key="frame" x="-2" y="10" width="104" height="16"/>
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfS-Ya-yHK">
+                                                <rect key="frame" x="-2" y="15" width="104" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="5pz-t4-p2g"/>
                                                 </constraints>
@@ -671,8 +671,8 @@ Gw
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="label.preferences.server_port"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eS-Rq-H6a">
-                                                <rect key="frame" x="108" y="7" width="50" height="21"/>
+                                            <textField focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eS-Rq-H6a">
+                                                <rect key="frame" x="108" y="12" width="50" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="20y-g5-PAE"/>
                                                 </constraints>
@@ -693,9 +693,9 @@ Gw
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-ng-eVJ">
-                                        <rect key="frame" x="8" y="265" width="224" height="20"/>
+                                        <rect key="frame" x="8" y="369" width="224" height="20"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-80-DhV">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-80-DhV">
                                                 <rect key="frame" x="-2" y="2" width="104" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="C3K-x0-oIY"/>
@@ -733,9 +733,9 @@ Gw
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0i-QC-VD5">
-                                        <rect key="frame" x="8" y="209" width="328" height="40"/>
+                                        <rect key="frame" x="8" y="313" width="328" height="40"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2T-Of-oIs">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2T-Of-oIs">
                                                 <rect key="frame" x="-2" y="24" width="104" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="c14-fP-Nug"/>
@@ -796,9 +796,9 @@ Gw
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBU-17-EMb">
-                                        <rect key="frame" x="8" y="155" width="407" height="38"/>
+                                        <rect key="frame" x="8" y="259" width="407" height="38"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIL-hK-9WD">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIL-hK-9WD">
                                                 <rect key="frame" x="-2" y="22" width="104" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="UlF-hJ-Kxj"/>
@@ -825,7 +825,7 @@ Gw
                                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="action.facetime_integration"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-mu-GMW">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aen-mu-GMW">
                                                         <rect key="frame" x="-2" y="0.0" width="303" height="14"/>
                                                         <textFieldCell key="cell" title="Make and receive FaceTime calls on Android and the web" id="pqZ-fw-vlw">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -856,10 +856,88 @@ Gw
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gw-IQ-Nql">
+                                        <rect key="frame" x="8" y="155" width="388" height="88"/>
+                                        <subviews>
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yBm-aZ-StB">
+                                                <rect key="frame" x="-2" y="56" width="104" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="n0Q-MG-fDr"/>
+                                                </constraints>
+                                                <textFieldCell key="cell" alignment="right" title="PingBerry Notifications" id="xGl-Kz-1En">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAY-7R-Ic2">
+                                                <rect key="frame" x="108" y="0.0" width="280" height="88"/>
+                                                <subviews>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7R9-Sb-dqK">
+                                                        <rect key="frame" x="-2" y="71" width="274" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Push Incoming Notifications to PingBerry" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dFW-Fe-Ufp">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="checkboxPingBerryClicked:" target="TFo-6b-9Gw" id="g4f-93-7N3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField hidden="YES" focusRingType="none" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZR-su-tei">
+                                                        <rect key="frame" x="0.0" y="67" width="300" height="21"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="user@email.com" drawsBackground="YES" id="UQO-TU-1RD">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKt-bn-GYY">
+                                                        <rect key="frame" x="-2" y="36" width="284" height="28"/>
+                                                        <textFieldCell key="cell" title="Be notified of received messages on your BlackBerry 10 Device" id="qkd-CY-gWT">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kbI-ir-3Rk">
+                                                        <rect key="frame" x="-2" y="0.0" width="284" height="28"/>
+                                                        <textFieldCell key="cell" title="Learn how to configure PingBerry on your BlackBerry 10 Device" allowsEditingTextAttributes="YES" id="ya8-kk-zbo">
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="kbI-ir-3Rk" secondAttribute="trailing" id="cQm-X0-Jvq"/>
+                                                </constraints>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-C6-PJn">
                                         <rect key="frame" x="8" y="83" width="478" height="56"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8s-N2-K8S">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8s-N2-K8S">
                                                 <rect key="frame" x="-2" y="40" width="104" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="gJY-dl-Tpu"/>
@@ -886,7 +964,7 @@ Gw
                                                             <action selector="onClickSignOut:" target="TFo-6b-9Gw" id="WVI-ce-CMu"/>
                                                         </connections>
                                                     </button>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxh-hs-p0X">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxh-hs-p0X">
                                                         <rect key="frame" x="-2" y="0.0" width="374" height="28"/>
                                                         <textFieldCell key="cell" id="9rX-SG-iNc">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -923,9 +1001,6 @@ Gw
                                         <endViews>
                                             <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hfm-yQ-Gm5">
                                                 <rect key="frame" x="376" y="8" width="76" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="qOY-z8-xD1"/>
-                                                </constraints>
                                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lhc-ne-Ivu">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -933,6 +1008,9 @@ Gw
 Gw
 </string>
                                                 </buttonCell>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="qOY-z8-xD1"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="action.cancel"/>
                                                 </userDefinedRuntimeAttributes>
@@ -942,9 +1020,6 @@ Gw
                                             </button>
                                             <button verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ib1-Ba-BMe">
                                                 <rect key="frame" x="446" y="8" width="53" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="ZGy-wU-rIW"/>
-                                                </constraints>
                                                 <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="omR-mC-rqb">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -952,6 +1027,9 @@ Gw
 DQ
 </string>
                                                 </buttonCell>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="ZGy-wU-rIW"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="action.ok"/>
                                                 </userDefinedRuntimeAttributes>
@@ -985,8 +1063,10 @@ DQ
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -1009,10 +1089,13 @@ DQ
                         <outlet property="checkboxAutoUpdate" destination="64v-87-Mw3" id="Coh-fL-oYO"/>
                         <outlet property="checkboxBetaUpdate" destination="7if-Yx-qbX" id="ABN-ED-Lze"/>
                         <outlet property="checkboxFaceTime" destination="jdc-vN-R7q" id="Bdz-Jl-giU"/>
+                        <outlet property="checkboxPingBerry" destination="7R9-Sb-dqK" id="ae1-rP-LJU"/>
                         <outlet property="groupFaceTime" destination="bBU-17-EMb" id="tYe-K6-CYb"/>
                         <outlet property="groupPort" destination="BoU-vA-LNw" id="tag-vL-ABk"/>
+                        <outlet property="inputPingBerryEmail" destination="lZR-su-tei" id="dvL-AH-1yU"/>
                         <outlet property="inputPort" destination="8eS-Rq-H6a" id="8Ic-jr-MJz"/>
                         <outlet property="labelSignOut" destination="jxh-hs-p0X" id="Ty6-Gy-jbN"/>
+                        <outlet property="linkConfigurePingBerry" destination="kbI-ir-3Rk" id="EML-iU-m2m"/>
                     </connections>
                 </viewController>
                 <customObject id="QKv-tJ-wjm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1020,7 +1103,7 @@ DQ
                     <rect key="frame" x="0.0" y="0.0" width="328" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-SI-Lfz">
+                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JzJ-SI-Lfz">
                             <rect key="frame" x="-2" y="24" width="104" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="lsu-hJ-yOC"/>
@@ -1122,7 +1205,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xr-yx-pAS">
                                 <rect key="frame" x="20" y="20" width="400" height="731"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-NU-Jdd">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-NU-Jdd">
                                         <rect key="frame" x="-2" y="710" width="288" height="21"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Grant Full Disk Access to AirMessage" id="nxf-aY-KhM">
                                             <font key="font" textStyle="title2" name=".SFNS-Regular"/>
@@ -1133,7 +1216,7 @@ DQ
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.full_disk_access"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n0l-AX-yD6">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n0l-AX-yD6">
                                         <rect key="frame" x="-2" y="662" width="404" height="32"/>
                                         <textFieldCell key="cell" title="AirMessage Server needs Full Disk Access in order to read your messages." id="Y8k-7T-NTB">
                                             <font key="font" metaFont="system"/>
@@ -1176,7 +1259,7 @@ DQ
                                                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bt-Lh-CQ6">
                                                         <rect key="frame" x="0.0" y="124" width="386" height="112"/>
                                                         <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-L0-zQb">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HV6-L0-zQb">
                                                                 <rect key="frame" x="-2" y="96" width="338" height="16"/>
                                                                 <textFieldCell key="cell" title="• Click the lock in the bottom-left corner of the window" id="Sdi-Nc-DRj">
                                                                     <font key="font" metaFont="system"/>
@@ -1187,7 +1270,7 @@ DQ
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.full_disk_access.step1"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1G3-zf-0z7">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1G3-zf-0z7">
                                                                 <rect key="frame" x="-2" y="64" width="390" height="16"/>
                                                                 <textFieldCell key="cell" title="• Drag and drop the AirMessage icon to the Full Disk Access list" id="cgh-qo-Cih">
                                                                     <font key="font" metaFont="system"/>
@@ -1198,7 +1281,7 @@ DQ
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.full_disk_access.step2HighSierra"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-F9-CTg">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-F9-CTg">
                                                                 <rect key="frame" x="-2" y="32" width="275" height="16"/>
                                                                 <textFieldCell key="cell" title="• Add AirMessage to the Full Disk Access list" id="Vd9-3n-Pg0">
                                                                     <font key="font" metaFont="system"/>
@@ -1209,7 +1292,7 @@ DQ
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.full_disk_access.step2Yosemite"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-73-vFy">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dp6-73-vFy">
                                                                 <rect key="frame" x="-2" y="0.0" width="144" height="16"/>
                                                                 <textFieldCell key="cell" title="• Relaunch AirMessage" id="IzJ-JA-BHJ">
                                                                     <font key="font" metaFont="system"/>
@@ -1234,7 +1317,7 @@ DQ
                                                             <real value="3.4028234663852886e+38"/>
                                                         </customSpacing>
                                                     </stackView>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-rK-AJE">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-rK-AJE">
                                                         <rect key="frame" x="-2" y="80" width="404" height="28"/>
                                                         <textFieldCell key="cell" title="If you're upgrading from an older version, you may need to fully remove AirMessage from the list before you add it again." id="xMg-0A-zxL">
                                                             <font key="font" metaFont="smallSystem"/>
@@ -1445,7 +1528,7 @@ DQ
                                                             </constraints>
                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="BrowserChrome" id="CDc-PE-COz"/>
                                                         </imageView>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SSw-1T-x1h">
+                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SSw-1T-x1h">
                                                             <rect key="frame" x="58" y="30" width="369" height="16"/>
                                                             <textFieldCell key="cell" title="Title" id="3Kz-ZL-dhB">
                                                                 <font key="font" metaFont="systemBold"/>
@@ -1453,7 +1536,7 @@ DQ
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g5q-ke-Gz6">
+                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="g5q-ke-Gz6">
                                                             <rect key="frame" x="58" y="11" width="369" height="16"/>
                                                             <textFieldCell key="cell" title="Title" id="aKU-dV-VHF">
                                                                 <font key="font" metaFont="system"/>
@@ -1512,7 +1595,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-WG-Pry">
                                 <rect key="frame" x="20" y="20" width="400" height="563"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-cA-0Uc">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qAW-cA-0Uc">
                                         <rect key="frame" x="-2" y="542" width="393" height="21"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Grant Messages Automation Access to AirMessage" id="73A-ed-irS">
                                             <font key="font" textStyle="title2" name=".SFNS-Regular"/>
@@ -1523,7 +1606,7 @@ DQ
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.automation_access"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWv-YB-ZIC">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XWv-YB-ZIC">
                                         <rect key="frame" x="-2" y="494" width="404" height="32"/>
                                         <textFieldCell key="cell" title="AirMessage Server needs Automation access for Messages in order to send messages." id="yse-h4-wdt">
                                             <font key="font" metaFont="system"/>
@@ -1557,7 +1640,7 @@ DQ
                                                     <action selector="onOpenAutomationAccess:" target="hja-eM-bID" id="fcD-WT-hcD"/>
                                                 </connections>
                                             </button>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gTA-5l-80M">
+                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gTA-5l-80M">
                                                 <rect key="frame" x="-2" y="0.0" width="404" height="32"/>
                                                 <textFieldCell key="cell" title="Find AirMessage in the Automation list, and click the checkbox for Messages." id="5UJ-gX-rqO">
                                                     <font key="font" metaFont="system"/>
@@ -1677,7 +1760,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qln-JE-dUV">
                                 <rect key="frame" x="96" y="16" width="550" height="307"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0aB-HU-2o1">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0aB-HU-2o1">
                                         <rect key="frame" x="-2" y="288" width="304" height="19"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="A new version of AirMessage is available!" id="Ne4-95-tzP">
                                             <font key="font" metaFont="systemBold" size="15"/>
@@ -1688,7 +1771,7 @@ DQ
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.update.title"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FhY-C3-Y1U">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FhY-C3-Y1U">
                                         <rect key="frame" x="-2" y="264" width="554" height="16"/>
                                         <textFieldCell key="cell" title="AirMessage Server 2.0 is available - you have 1.5. Would you like to download it now?" id="c7E-6N-uOg">
                                             <font key="font" metaFont="system"/>
@@ -1696,7 +1779,7 @@ DQ
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-qy-Mns">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-qy-Mns">
                                         <rect key="frame" x="-2" y="240" width="101" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Release Notes:" id="gHZ-Jf-doy">
                                             <font key="font" metaFont="systemBold"/>
@@ -1813,7 +1896,7 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="450" height="64"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r03-ln-Lzg">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r03-ln-Lzg">
                                 <rect key="frame" x="18" y="34" width="414" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Installing update…" id="IJf-wZ-OBH">
@@ -1851,7 +1934,7 @@ DQ
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-xd-V0v">
                                 <rect key="frame" x="20" y="20" width="400" height="703"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="egj-zm-1Sb">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="egj-zm-1Sb">
                                         <rect key="frame" x="-2" y="682" width="318" height="21"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Grant Accessibility Access to AirMessage" id="1jx-92-aBu">
                                             <font key="font" textStyle="title2" name=".SFNS-Regular"/>
@@ -1862,7 +1945,7 @@ DQ
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.accessibility_access"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6KL-A9-4Z2">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6KL-A9-4Z2">
                                         <rect key="frame" x="-2" y="634" width="404" height="32"/>
                                         <textFieldCell key="cell" title="AirMessage Server needs Accessibility access in order to send messages and make FaceTime calls." id="CJA-f6-sbH">
                                             <font key="font" metaFont="system"/>
@@ -1902,7 +1985,7 @@ DQ
                                                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="La2-p6-qad">
                                                         <rect key="frame" x="0.0" y="124" width="363" height="48"/>
                                                         <subviews>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qbp-Gn-59l">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qbp-Gn-59l">
                                                                 <rect key="frame" x="-2" y="32" width="338" height="16"/>
                                                                 <textFieldCell key="cell" title="• Click the lock in the bottom-left corner of the window" id="T4M-wV-DrX">
                                                                     <font key="font" metaFont="system"/>
@@ -1913,7 +1996,7 @@ DQ
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="message.grant.accessibility_access.step1"/>
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
-                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38b-UX-wUW">
+                                                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38b-UX-wUW">
                                                                 <rect key="frame" x="-2" y="0.0" width="367" height="16"/>
                                                                 <textFieldCell key="cell" title="• Drag and drop the AirMessage icon to the Accessibility list" id="p6A-BV-6hg">
                                                                     <font key="font" metaFont="system"/>
@@ -1934,7 +2017,7 @@ DQ
                                                             <real value="3.4028234663852886e+38"/>
                                                         </customSpacing>
                                                     </stackView>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q6k-QM-FVi">
+                                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q6k-QM-FVi">
                                                         <rect key="frame" x="-2" y="80" width="404" height="28"/>
                                                         <textFieldCell key="cell" title="If you're upgrading from an older version, you may need to fully remove AirMessage from the list before you add it again." id="Jd9-Rh-peR">
                                                             <font key="font" metaFont="smallSystem"/>

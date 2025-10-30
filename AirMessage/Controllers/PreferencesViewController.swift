@@ -21,6 +21,10 @@ class PreferencesViewController: NSViewController {
 	@IBOutlet weak var groupFaceTime: NSStackView!
 	@IBOutlet weak var checkboxFaceTime: NSButton!
 	
+    @IBOutlet weak var checkboxPingBerry: NSButton!
+    @IBOutlet weak var inputPingBerryEmail: NSTextField!
+    @IBOutlet weak var linkConfigurePingBerry: NSTextField!
+    
 	@IBOutlet weak var buttonSignOut: NSButton!
 	@IBOutlet weak var labelSignOut: NSTextField!
 	
@@ -70,6 +74,10 @@ class PreferencesViewController: NSViewController {
 			groupFaceTime.removeFromSuperview()
 			isShowingFaceTime = false
 		}
+        
+        checkboxPingBerry.state = PreferencesManager.shared.pingberryEnabled ? .on : .off
+        
+        inputPingBerryEmail.stringValue = String(PreferencesManager.shared.pingberryEmail)
 		
 		//Update "sign out" button text
 		if PreferencesManager.shared.accountType == .direct {
@@ -79,6 +87,23 @@ class PreferencesViewController: NSViewController {
 			buttonSignOut.title = NSLocalizedString("action.sign_out", comment: "")
 			labelSignOut.stringValue = String(format: NSLocalizedString("message.preference.account_connect", comment: ""), PreferencesManager.shared.connectEmailAddress ?? "nil")
 		}
+        
+        inputPingBerryEmail.isHidden = !PreferencesManager.shared.pingberryEnabled
+        
+        let text = "Learn how to configure PingBerry on your BlackBerry 10 Device"
+        let url = URL(string: "https://github.com/andreytakhtamirov/pingberry?tab=readme-ov-file#-pingberry")!
+        
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        attributedString.addAttributes([
+            .link: url,
+            .foregroundColor: NSColor.linkColor,
+            .underlineStyle: NSUnderlineStyle.single.rawValue
+        ], range: NSMakeRange(0, text.count))
+        
+        linkConfigurePingBerry.allowsEditingTextAttributes = true
+        linkConfigurePingBerry.isSelectable = true
+        linkConfigurePingBerry.attributedStringValue = attributedString
 	}
 	
 	override func viewDidAppear() {
@@ -90,6 +115,10 @@ class PreferencesViewController: NSViewController {
 		//Focus app
 		NSApp.activate(ignoringOtherApps: true)
 	}
+    
+    @IBAction func checkboxPingBerryClicked(_ sender: NSButton) {
+        inputPingBerryEmail.isHidden = checkboxPingBerry.state == .off
+    }
 	
 	@IBAction func onClickClose(_sender: NSButton) {
 		//Close window
@@ -161,7 +190,25 @@ class PreferencesViewController: NSViewController {
 				}
 			}
 		}
-		
+
+        if checkboxPingBerry.state == .on {
+                let email = inputPingBerryEmail.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+                
+                if !isValidEmail(email) {
+                    let alert = NSAlert()
+                    alert.alertStyle = .critical
+                    alert.messageText = "Please enter a valid email address."
+                    alert.beginSheetModal(for: view.window!)
+                    return
+                }
+                
+                PreferencesManager.shared.pingberryEmail = email
+        } else {
+            PreferencesManager.shared.pingberryEmail = ""
+        }
+        
+        PreferencesManager.shared.pingberryEnabled = checkboxPingBerry.state == .on
+        
 		//Close window
 		view.window!.close()
 	}
@@ -245,6 +292,12 @@ class PreferencesViewController: NSViewController {
 			}
 		}
 	}
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return emailPredicate.evaluate(with: email)
+    }
 }
 
 private class PortFormatter: NumberFormatter {

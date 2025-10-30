@@ -21,6 +21,8 @@ class PreferencesManager {
 		case betaUpdates
 		case faceTimeIntegration
 		case accountType
+        case pingberryEnabled
+        case pingberryEmail
 		
 		//Storage
 		case connectUserID
@@ -34,7 +36,9 @@ class PreferencesManager {
 			UDKeys.checkUpdates.rawValue: true,
 			UDKeys.betaUpdates.rawValue: false,
 			UDKeys.faceTimeIntegration.rawValue: false,
-			UDKeys.accountType.rawValue: AccountType.unknown.rawValue
+			UDKeys.accountType.rawValue: AccountType.unknown.rawValue,
+            UDKeys.pingberryEnabled.rawValue: false,
+            UDKeys.pingberryEmail.rawValue: ""
 		])
 	}
 	
@@ -73,6 +77,24 @@ class PreferencesManager {
 			UserDefaults.standard.set(newValue, forKey: UDKeys.faceTimeIntegration.rawValue)
 		}
 	}
+    
+    var pingberryEnabled: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: UDKeys.pingberryEnabled.rawValue)
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: UDKeys.pingberryEnabled.rawValue)
+        }
+    }
+    
+    var pingberryEmail: String {
+        get {
+            UserDefaults.standard.string(forKey: UDKeys.pingberryEmail.rawValue) ?? ""
+        }
+        set(newValue) {
+            UserDefaults.standard.set(newValue, forKey: UDKeys.pingberryEmail.rawValue)
+        }
+    }
 	
 	var accountType: AccountType {
 		get {
