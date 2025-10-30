@@ -116,7 +116,6 @@ class PingBerryService {
         do {
             let jsonData = try JSONEncoder().encode(payload)
             request.httpBody = jsonData
-            print("[PingBerry Service] Sending notification: \(payload)")
         } catch {
             DispatchQueue.main.async {
                 completion(.failure(error))
